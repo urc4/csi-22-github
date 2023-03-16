@@ -13,7 +13,7 @@ def draw_poly(t,n,sz):
       pos_x = pos_x + math.cos(ang)*sz
       pos_y = pos_y + math.sin(ang)*sz
       t.goto(pos_x,pos_y)
-      
+      # could do this by using left
 
 
 
