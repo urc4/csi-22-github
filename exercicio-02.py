@@ -19,7 +19,7 @@ def draw_poly(t,n,sz):
 
 window = turtle.Screen()
 window.bgcolor("lightgreen")
-window.title("Exercicio 1")
-michelangelo = turtle.Turtle()
-draw_poly(michelangelo,7,100)
+window.title("Exercicio 2")
+donatello = turtle.Turtle()
+draw_poly(donatello,7,100)
 window.mainloop()
