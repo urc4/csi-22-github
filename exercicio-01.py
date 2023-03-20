@@ -1,23 +1,31 @@
 import turtle
-def draw_square(turtle_name,square_length):
-    """Make turtle turtle_name draw a square of lenght square_length centered around the origin"""
-    start_pos_x = -square_length/2;
-    start_pos_y = -square_length/2;
-    turtle_name.penup()
-    turtle_name.setposition(start_pos_x,start_pos_y)
-    turtle_name.pendown()
-    turtle_name.pensize(3)
-    turtle_name.pencolor("orange")
-    for i in range(4):
-        turtle_name.forward(square_length)
-        turtle_name.left(90)
+def draw_square(t,sz):
+    """Make turtle t draw a square of szght sz 
+    centered around the origin"""
+    start_pos_x = -sz/2;
+    start_pos_y = -sz/2;
+    t.penup()
+    t.setposition(start_pos_x,start_pos_y)
+    
+    t.pensize(3)
+    t.pencolor("orange")
+    t.pendown()
 
-def draw_squares_inside_out(turtle_name,number_squares):
-    step = 40
-    sq_len = 80
-    for i in range(number_squares):
-        draw_square(turtle_name,sq_len)
-        sq_len = sq_len + step
+    for i in range(4):
+        t.forward(sz)
+        t.left(90)
+
+def draw_squares_inside_out(t,num_squares):
+    """ Turtle t draws concentric num_squares squares 
+    from inside out using the draw_square function"""
+    step = 20
+    sq_sz = 20
+
+    for i in range(num_squares):
+        draw_square(t,sq_sz)
+        sq_sz = sq_sz + step
+
+
 
 window = turtle.Screen()
 window.bgcolor("lightgreen")
