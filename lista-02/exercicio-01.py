@@ -16,6 +16,8 @@ def remove_empty_tuples(_tuple):
     return tuple(_list)
 
 
+# poderia fazer while () is in ... remove
+
 _tuple = (
     (),
     (3, 2),

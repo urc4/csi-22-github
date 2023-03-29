@@ -1,4 +1,5 @@
 def contains_characters(og_string, yg_string):
+    """CHecks if charcters in string"""
     yg_list = list(yg_string)
     for char in og_string:
         while char in yg_list:
