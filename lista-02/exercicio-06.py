@@ -1,4 +1,5 @@
 def gen_inv_list(_list):
+    """Generates the list backwards"""
     index = len(_list) - 1
     while index >= 0:
         yield _list[index]

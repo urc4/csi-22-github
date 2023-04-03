@@ -1,20 +1,15 @@
-def filter_decimal_alphabet(l_strings):
-    """Filters strings that contain alphabetic and decimal characters"""
-    alnum_strings = []
-    for str in l_strings:
-        if str.isalnum():
-            alnum_strings.append(str)
-
-    return alnum_strings
-
-
-def filter_decimal_alphabet_filter(l_strings):
+def filter_alphanum(strings_list):
     """Filters strings that contain alphabetic and decimal characters from a list of strings"""
 
-    return list(filter(lambda str: str.isalnum() == 1, l_strings))
+    return list(
+        filter(
+            lambda str: any(char.isdigit() or char.isalpha() for char in str),
+            strings_list,
+        )
+    )
 
 
-l_strings = [
+strings_list = [
     "oi",
     "plameiras",
     ".tr45",
@@ -24,9 +19,9 @@ l_strings = [
     "'a;sd';@",
     "re3@",
     "",
+    ".............",
     "ultimo",
 ]
 
-print(l_strings)
-print(filter_decimal_alphabet(l_strings))
-print(filter_decimal_alphabet_filter(l_strings))
+print(strings_list)
+print(filter_alphanum(strings_list))

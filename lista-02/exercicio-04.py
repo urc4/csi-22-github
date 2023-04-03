@@ -1,14 +1,14 @@
-def contains_characters(og_string, yg_string):
-    """Checks if charcters in string are in another string"""
-    yg_list = list(yg_string)
-    for char in og_string:
-        while char in yg_list:
-            yg_list.remove(char)
+def contains_all_characters(text, subtext):
+    """Checks if characters in string subtext are in string text"""
+    subtext_list = list(subtext)
+    for char in text:
+        while char in subtext_list:
+            subtext_list.remove(char)
 
-    return len(yg_list) == 0
+    return len(subtext_list) == 0
 
 
 str = "palmeiras"
-ystr = "amlias"
+ystr = "amliaspalmeiras"
 
-print(contains_characters(str, ystr))
+print(contains_all_characters(str, ystr))
