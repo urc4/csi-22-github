@@ -1,15 +1,21 @@
 import math
 
 
+def is_prime(num):
+    for k in range(2, num):
+        if num % k == 0:
+            return False
+    return True
+
+
 def get_primes():
-    num = 3
+    num = 2
     while True:
-        for k in range(2, num):
-            if num % k == 0:
-                num = num + 1
-                break
-        yield num
-        num = num + 1
+        # if num == 2:
+        #     yield num
+        if is_prime(num):
+            yield num
+        num += 1
 
 
 for i in get_primes():
