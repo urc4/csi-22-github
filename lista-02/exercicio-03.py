@@ -9,7 +9,7 @@ def filter_decimal_alphabet(l_strings):
 
 
 def filter_decimal_alphabet_filter(l_strings):
-    """Filters strings that contain alphabetic and decimal characters"""
+    """Filters strings that contain alphabetic and decimal characters from a list of strings"""
 
     return list(filter(lambda str: str.isalnum() == 1, l_strings))
 
@@ -27,6 +27,6 @@ l_strings = [
     "ultimo",
 ]
 
-
+print(l_strings)
 print(filter_decimal_alphabet(l_strings))
 print(filter_decimal_alphabet_filter(l_strings))

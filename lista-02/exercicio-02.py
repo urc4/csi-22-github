@@ -1,5 +1,5 @@
-def get_averages(tuples):
-    """Returns the average by 2"""
+def get_average(tuples):
+    """Returns a tuple with the average by 2 from a tuple of tuples"""
     averages = []
     for tup in tuples:
         sum = 0
@@ -10,4 +10,4 @@ def get_averages(tuples):
 
 
 tuples = ((2, 3, 4), (3, 4, 5, 6), (2, 4), (4, 8, 9))
-print(get_averages(tuples))
+print(get_average(tuples))

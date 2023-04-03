@@ -1,25 +1,26 @@
-def get_inner_product(u, v):
-    if len(u) != len(v):
-        return False
-    dimension = len(u)
-    in_p = 0
-    for index in range(dimension):
-        in_p += u[index] * v[index]
-    return in_p
-
-
 def multiply_matrices(A, B):
-    """Multiplies two matrices"""
-    m_dim = len(B)
-    for i in range(m_dim):
-        m_elem = 0
-    pass
+    """Multiplies two matrices and returns the resultant matrix,
+    returns false if the operation is
+    not allowed"""
+    m = len(A)
+    hA = len(A[0])
+    n = len(B[0])
+    hB = len(B)
+
+    if hA != hB:
+        return False
+    else:
+        h = hA = hB
+
+    C = [[0] * n for i in range(m)]
+    for i in range(m):
+        for j in range(n):
+            for k in range(h):
+                C[i][j] += A[i][k] * B[k][j]
+    return C
 
 
 A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+A = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
 B = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-
-u = A[0]
-v = A[1]
-print(len(A))
-print(get_inner_product(u, v))
+print(multiply_matrices(A, B))
