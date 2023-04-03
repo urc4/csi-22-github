@@ -1,7 +1,18 @@
-def filter_even(lst):
-    return list(filter(lambda num: num % 2 == 0, lst))
+import math
 
 
-lst = [4, 7, 87, 45, 34, 6, 88, 23, 556, 8745, 2345, 56]
-for even in filter_even(lst):
-    print(even)
+def get_primes():
+    num = 3
+    while True:
+        for k in range(2, num):
+            if num % k == 0:
+                num = num + 1
+                break
+        yield num
+        num = num + 1
+
+
+for i in get_primes():
+    if i > 100:
+        break
+    print(i, end=" ")
