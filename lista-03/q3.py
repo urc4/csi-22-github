@@ -1,31 +1,35 @@
-class Mammal:
+class Animal:
+    pass
+
+
+class Mammal(Animal):
     def __init__(self, name):
         self.name = name
 
     def info(self):
-        return f"I can milk."
+        return f"can milk."
 
     def get_name(self):
         return self.name
 
 
-class Reptile:
+class Reptile(Animal):
     def __init__(self, name):
         self.name = name
 
     def info(self):
-        return f"I am cold blooded."
+        return f"is cold blooded."
 
     def get_name(self):
         return self.name
 
 
-class Bird:
+class Bird(Animal):
     def __init__(self, name):
         self.name = name
 
     def info(self):
-        return f"I can fly."
+        return f"can fly."
 
     def get_name(self):
         return self.name
@@ -35,9 +39,9 @@ mammal = Mammal("Marley")
 reptile = Reptile("Crocs")
 bird = Bird("Larry")
 
-print(mammal.info())
 print(mammal.get_name())
-print(reptile.info())
+print(mammal.info())
 print(reptile.get_name())
-print(bird.info())
+print(reptile.info())
 print(bird.get_name())
+print(bird.info())
